@@ -4,26 +4,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Button, Label } from 'component-lib';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import FlatButton from 'material-ui/FlatButton';
-// import ActionAndroid from 'material-ui/svg-icons/action/android';
-// import Divider from 'material-ui/Divider';
-// import Paper from 'material-ui/Paper';
-// import TextField from 'material-ui/TextField';
-// import { withStyles, createStyleSheet } from 'material-ui/styles';
 
 import color from '../styles/color';
 import SideLeft from './SideLeft';
 import SideRight from './SIdeRight';
 
 import '../assets/stylesheets/base.less';
-
-
-// import injectTapEventPlugin from 'react-tap-event-plugin';
-
-// injectTapEventPlugin();
 
 const styles = {
   box: {

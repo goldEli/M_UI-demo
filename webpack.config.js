@@ -22,8 +22,7 @@ module.exports = {
         ]
   },
   externals: {
-      'react': 'React',
-      'reactDom': 'react-dom',
+    // antd: 'antd'
   }, 
   resolve: {
     extensions: ['.js','.scss']
@@ -40,14 +39,10 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      {
-        from: './node_modules/react/dist/react.min.js',
-        to: 'js/react.min.js'
-      },
-      {
-        from: './node_modules/react-dom/dist/react-dom.min.js',
-        to: 'js/react-dom.min.js'
-      },
+      // {
+      //   from: './node_modules/antd/dist/antd.min.js',
+      //   to: 'js/antd.min.js'
+      // },
     ]),                          
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),

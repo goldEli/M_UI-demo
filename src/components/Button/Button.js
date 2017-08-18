@@ -16,7 +16,6 @@ export default class Button extends React.Component{
 
     componentDidMount() {
 
-        
     }
 
     render() {
@@ -36,19 +35,33 @@ export default class Button extends React.Component{
             }
         ]
 
+        var Example_code = `
+import React from 'react';
+
+import { Button } from 'component-lib';
+
+export default class Example extends React.Component{
+    render() {
+
+        return (
+            <div>
+                <Button labelStyle = {{"fontSize": "16px"}} size = "small" />
+                <Button size = "medium" />
+                <Button size = "large" />
+            </div>
+        )
+    }
+}        
+`
+
         return(
             <div>
-                <SideRightCell title = "基础用法" id = "1210d94fe42a709982955882845a61dd">
+                <SideRightCell code = {Example_code} title = "基础用法" >
                     <Example />
                 </SideRightCell>
-                <SideRightCell title = "文字 & 图标" id = "9b6b360fe28a9168d58e9304b67df126">
-
-                </SideRightCell>
-                <SideRightCell title = "尺寸" id = "1210d94fe42a709982955882845a61dd">
-                    <Example_size />
-                </SideRightCell>
+                
                 <SideRightCell title = "属性" >
-                    <PropertyTable propertys = {propertys}/>
+                    <PropertyTable propertys = { propertys }/>
                 </SideRightCell>
             </div>
         )
