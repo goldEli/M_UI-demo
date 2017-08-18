@@ -39,10 +39,10 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      // {
-      //   from: './node_modules/antd/dist/antd.min.js',
-      //   to: 'js/antd.min.js'
-      // },
+      {
+        from: './index.html',
+        to: 'index.html'
+      },
     ]),                          
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
