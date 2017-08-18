@@ -1,5 +1,9 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './components/App';
+/**
+ *  create by miaoyu  2017/8/14 
+ */
 
-render(<App name='World' />, document.getElementById('root'));
+import React from 'react';
+import reactDom, { render } from 'react-dom';
+import Layout from './Layout/Layout'
+
+render(<Layout name='World' />, document.getElementById('root'));

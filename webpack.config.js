@@ -1,16 +1,30 @@
 const webpack = require('webpack');
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
     './src/index'
   ],
   module: {
-    loaders: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
-    ]
+        rules: [{
+                  test: /\.less$/,
+                  use: [{
+                      loader: "style-loader" // creates style nodes from JS strings
+                  }, {
+                      loader: "css-loader" // translates CSS into CommonJS
+                  }, {
+                      loader: "less-loader" // compiles Less to CSS
+                  }]
+                },
+                { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
+                { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
+        ]
   },
+  externals: {
+      'react': 'React',
+      'reactDom': 'react-dom',
+  }, 
   resolve: {
     extensions: ['.js','.scss']
   },
@@ -25,6 +39,16 @@ module.exports = {
     hot: true
   },
   plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: './node_modules/react/dist/react.min.js',
+        to: 'js/react.min.js'
+      },
+      {
+        from: './node_modules/react-dom/dist/react-dom.min.js',
+        to: 'js/react-dom.min.js'
+      },
+    ]),                          
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()

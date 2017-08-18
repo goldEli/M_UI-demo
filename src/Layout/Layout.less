@@ -1,0 +1,79 @@
+@import '../styles/color.less';
+
+
+.SideRightCell{
+
+    margin: 20px 30px;
+    border-top: 1px solid @grey;
+    border-bottom: 1px solid @grey;
+
+    .SideRightCellTitle{
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        color: @blue1;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    :local .areaBox{
+        width: 100%;
+        overflow: hidden;
+    }
+
+}
+
+.SideRight{
+
+    width:100%;
+    height: 100%;
+    overflow:hidden;
+
+    :local .title{
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
+        background-color: @blue1;
+    }
+
+    :local .titleText{
+        color: @white;
+        text-indent: 50px;
+        line-height: 80px;
+        font-size: 16px;
+    }
+
+    :local .showArea{
+        width: 100%;
+        overflow: auto;
+    }
+}
+
+.SideLeft{
+
+    width:100%;
+    height: 100%;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+
+    :local .title{
+        width: 100%;
+        height: 80px;
+        overflow: hidden;
+        background-color: @blue1;
+    }
+    :local .menu{
+        width: 100%;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    :local .titleText{
+        color: @white;
+        text-align: center;
+        line-height: 80px;
+        font-size: 24px;
+    }
+}
+
