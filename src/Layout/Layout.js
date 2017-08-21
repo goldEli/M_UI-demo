@@ -6,6 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import color from '../styles/color';
 import SideLeft from './SideLeft';
@@ -37,8 +38,6 @@ const styles = {
 
 };
 
-
-
 class Layout extends React.Component{
   constructor(props) {
     super(props)
@@ -46,7 +45,6 @@ class Layout extends React.Component{
   render() {
 
     return (
-      <MuiThemeProvider>
         <div style = {styles.box}>
             <div style = {styles.left}>
                 <SideLeft/>
@@ -56,7 +54,7 @@ class Layout extends React.Component{
                 <SideRight/>
             </div> 
         </div>
-      </MuiThemeProvider>
+      
     );
   }
 }
