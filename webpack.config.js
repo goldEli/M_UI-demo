@@ -39,10 +39,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      {
-        from: './index.html',
-        to: 'index.html'
-      },
+    
     ]),                          
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
